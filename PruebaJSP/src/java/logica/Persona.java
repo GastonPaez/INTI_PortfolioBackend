@@ -4,13 +4,19 @@
  */
 package logica;
 
-/**
- *
- * @author 54113
- */
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Basic;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+
+@Entity
 public class Persona {
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-    private String dani;
+    @Basic    
     private String nombre;
     private String apellido;
     private String telefono;
